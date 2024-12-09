@@ -36,10 +36,10 @@ db.connect().catch((err) =>
 );
 
 app.use(cors({
-origin: ["*"],
 Access-Control-Allow-Origin: ["*"],
-methods: ["GET","POST","PUT","DELETE"].
-credentials: true
+Access-Control-Allow-Methods: ["GET, POST, OPTIONS, PUT, PATCH, DELETE"],
+Access-Control-Allow-Headers: ["X-Requested-With,content-type"],
+Access-Control-Allow-Credentials : true
   
 }));
 app.use(morgan("dev"));
