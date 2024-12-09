@@ -37,6 +37,7 @@ db.connect().catch((err) =>
 
 app.use(cors({
 origin: ["*"],
+Access-Control-Allow-Origin: ["*"],
 methods: ["GET","POST","PUT","DELETE"].
 credentials: true
   
