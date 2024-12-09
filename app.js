@@ -36,7 +36,7 @@ db.connect().catch((err) =>
 );
 
 app.use(cors({
-origin: ["https://csd-client.vercel.app"],
+origin: ["*"],
 methods: ["GET","POST","PUT","DELETE"].
 credentials: true
   
