@@ -35,7 +35,12 @@ db.connect().catch((err) =>
   console.error("Error connecting to database:", err)
 );
 
-app.use(cors());
+app.use(cors({
+origin: ["https://csd-client.vercel.app"],
+methods: ["GET","POST","PUT","DELETE"].
+credentials: true
+  
+}));
 app.use(morgan("dev"));
 app.use("/assets/userFiles", express.static(__dirname + "/assets/userFiles"));
 app.use(
