@@ -9,6 +9,10 @@
 
 require("dotenv").config();
 const express = require("express");
+const geoip = require('geoip-lite');
+const path = require('path');
+const fs = require('fs');
+
 const adminRoutes = require("./routes/admin.route");
 const userRoutes = require("./routes/user.route");
 const postRoutes = require("./routes/post.route");
@@ -35,6 +39,9 @@ db.connect().catch((err) =>
   console.error("Error connecting to database:", err)
 );
 
+const geoFilePath = path.join(__dirname, 'path-to-your-local-geoip-country.dat');
+geoip.loadData(geoFilePath);
+
 app.use(cors({
 origin: ["https://csd-client.vercel.app"],
 methods: ["GET, POST, OPTIONS, PUT, PATCH, DELETE"],
@@ -49,7 +56,6 @@ app.use(
 );
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, './public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 require("./config/passport.js");
