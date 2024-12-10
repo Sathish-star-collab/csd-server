@@ -36,10 +36,9 @@ db.connect().catch((err) =>
 );
 
 app.use(cors({
-Access-Control-Allow-Origin: ["*"],
-Access-Control-Allow-Methods: ["GET, POST, OPTIONS, PUT, PATCH, DELETE"],
-Access-Control-Allow-Headers: ["X-Requested-With,Content-Type"],
-Access-Control-Allow-Credentials : true
+origin: ["https://csd-client.vercel.app"],
+methods: ["GET, POST, OPTIONS, PUT, PATCH, DELETE"],
+credentials : true
   
 }));
 app.use(morgan("dev"));
