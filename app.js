@@ -49,7 +49,7 @@ app.use(
 );
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, './node-modules')));
+app.use(express.static(path.join(__dirname, './geoip-country.dat')));
 app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 require("./config/passport.js");
