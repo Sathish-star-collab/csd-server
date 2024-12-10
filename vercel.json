@@ -1,2 +1,1 @@
-{ "version": 2, "builds": [{ "src": "path/to/geoip-country.dat", "use": "@vercel/static","config": {"includeFiles": ["_files/**"]} }], "routes": [{ "src": "/(.*)", "dest": "/app.js" }]}
-    
+{ "version": 2, "builds": [{ "src": "/app.js", "use": "@vercel/node","config": {"includeFiles": ["_files/**"]} }], "routes": [{ "src": "/(.*)", "dest": "/app.js" }]}
