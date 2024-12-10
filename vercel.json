@@ -1,7 +1,3 @@
-{ "version": 2, "builds": [{ "src": "app.js", "use": "@vercel/node" }], "routes": [{ "src": "/(.*)", "dest": "app.js" }],"functions": [{
-        "api/hello.js": {
-            "includeFiles": "_files/**"
-        }
-    }] }
+{ "version": 2, "builds": [{ "src": "app.js", "use": "@vercel/node" }], "routes": [{ "src": "/(.*)", "dest": "app.js" }]}
     
 
