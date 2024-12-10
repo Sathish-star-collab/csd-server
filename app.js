@@ -9,10 +9,6 @@
 
 require("dotenv").config();
 const express = require("express");
-const geoip = require('geoip-lite');
-const path = require('path');
-const fs = require('fs');
-
 const adminRoutes = require("./routes/admin.route");
 const userRoutes = require("./routes/user.route");
 const postRoutes = require("./routes/post.route");
@@ -23,7 +19,6 @@ const Database = require("./config/database");
 const decodeToken = require("./middlewares/auth/decodeToken");
 
 const app = express();
-
 const cors = require("cors");
 const morgan = require("morgan");
 const passport = require("passport");
@@ -38,9 +33,6 @@ const db = new Database(process.env.MONGODB_URI, {
 db.connect().catch((err) =>
   console.error("Error connecting to database:", err)
 );
-
-const geoFilePath = path.join(__dirname, 'path-to-your-local-geoip-country.dat');
-geoip.loadData(geoFilePath);
 
 app.use(cors({
 origin: ["https://csd-client.vercel.app"],
