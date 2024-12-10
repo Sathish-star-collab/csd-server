@@ -9,6 +9,7 @@
 
 require("dotenv").config();
 const express = require("express");
+const path = require('path');
 const adminRoutes = require("./routes/admin.route");
 const userRoutes = require("./routes/user.route");
 const postRoutes = require("./routes/post.route");
@@ -48,6 +49,7 @@ app.use(
 );
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, './public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 require("./config/passport.js");
