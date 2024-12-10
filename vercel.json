@@ -1,17 +1,2 @@
-{
-
- "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node"
-    }
-  ],
-  "files": [
-    "node_modules/geoip-lite/data/**/*"
-  ],
-  "build": {
-    "env": {
-      "GEOLITE_DATA_PATH": "node_modules/geoip-lite/data"
-    }
-  }
+{ "version": 2, "builds": [{ "src": "/app.js", "use": "@vercel/node","config": {"includeFiles": ["_files/**"]} }], "routes": [{ "src": "/(.*)", "dest": "/app.js" }]}
+    
