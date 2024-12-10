@@ -4,9 +4,11 @@
   "description": "A social networking platform",
   "main": "app.js",
   "scripts": {
+    "build": "cp node_modules/geoip-lite/data/geoip-country.dat ./.vercel/output/functions/_geoip-country.dat && next build"
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "production": "node app.js"
+    
   },
   "author": "Neaz",
   "license": "ISC",
