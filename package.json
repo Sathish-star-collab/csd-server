@@ -4,9 +4,11 @@
   "description": "A social networking platform",
   "main": "app.js",
   "scripts": {
+    "postinstall": "cp ./node_modules/geoip-lite/data/geoip-country.dat ./public/data/geoip-country.dat"
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "production": "node app.js"
+    "production": "node app.js",
+    
     
   },
   "author": "Neaz",
