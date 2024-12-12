@@ -47,6 +47,10 @@ app.use(
   "/assets/userAvatars",
   express.static(__dirname + "/assets/userAvatars")
 );
+app.use(
+  "/node_modules/geoip-lite/data/geoip-country.dat",
+  express.static(__dirname + "/node_modules/geoip-lite/data/geoip-country.dat")
+);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, './public')));
