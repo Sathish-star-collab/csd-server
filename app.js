@@ -57,10 +57,6 @@ app.use(
   "/node_modules/geoip-lite/data/geoip-country6.dat",
   express.static(__dirname + "/node_modules/geoip-lite/data/geoip-country6.dat")
 );
-app.use(
-  "/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js",
-  express.static(__dirname + "/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js")
-);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, './public')));
