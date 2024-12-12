@@ -51,6 +51,10 @@ app.use(
   "/node_modules/geoip-lite/data/geoip-country.dat",
   express.static(__dirname + "/node_modules/geoip-lite/data/geoip-country.dat")
 );
+app.use(
+  "/node_modules/geoip-lite/data/geoip-country6.dat",
+  express.static(__dirname + "/node_modules/geoip-lite/data/geoip-country6.dat")
+);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, './public')));
