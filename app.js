@@ -73,7 +73,6 @@ app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 app.use("/communities", communityRoutes);
 app.use("/admin", adminRoutes);
-app.get('/headers', (req, res) => res.json(req.headers) );
 
 process.on("SIGINT", async () => {
   try {
