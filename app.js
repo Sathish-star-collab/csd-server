@@ -58,8 +58,8 @@ app.use(
   express.static(__dirname + "/node_modules/geoip-lite/data/geoip-country6.dat")
 );
 app.use(
-  "/node_modules/mongodb",
-  express.static(__dirname + "/node_modules/mongodb")
+  "/node_modules/mongoose",
+  express.static(__dirname + "/node_modules/mongoose")
 );
 
 app.use(express.json());
